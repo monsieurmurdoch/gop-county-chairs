@@ -1,0 +1,213 @@
+{
+  "bodyText": "We value your privacy\n\nWe use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking \"Accept All\", you consent to our use of cookies.\n\nCustomise\nReject All\nAccept All\nSkip to content\nABOUT\nTAKE ACTION\nEVENTS\nSTORE\nSTATE COMMITTEE\nDONATE\nThis page cannot be found.\n\nTry a search or go back to our homepage:\n\nSearch\nFacebook\nTwitter\nInstagram\n\nPO Box 477 | Harrisburg, PA 17108\nPhone: (717) 234-4901\n\nPrivacy Policy\n\nThis site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.\n\nBy providing your phone number, you are consenting to receive calls and SMS/MMS messages, including autodialed and automated calls and texts, to that number. Message & data rates may apply. Privacy policies apply.\n\nPAID FOR BY REPUBLICAN FEDERAL COMMITTEE OF PENNSYLVANIA. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE’S COMMITTEE.\n\n EN ",
+  "potentialData": [
+    {
+      "selector": "ul li",
+      "text": "ABOUTOur PartyFind My CountyElected Officials",
+      "html": "<a class=\"wp-block-navigation-item__content\" href=\"https://pagop.org/about/\"><span class=\"wp-block-navigation-item__label\">ABOUT</span><button data-wp-bind--aria-expanded=\"state.isMenuOpen\" data-wp-on-async--click=\"actions.toggleMenuOnClick\" aria-label=\"ABOUT submenu\" class=\"wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle\" aria-expanded=\"false\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" aria-hidden=\"true\" focusable=\"false\""
+    },
+    {
+      "selector": "ul li",
+      "text": "Find My County",
+      "html": "<a class=\"wp-block-navigation-item__content\" href=\"https://pagop.org/about/counties/\"><span class=\"wp-block-navigation-item__label\">Find My County</span></a>"
+    },
+    {
+      "selector": "ul li",
+      "text": "ABOUTOur PartyFind My CountyElected Officials",
+      "html": "<button data-wp-bind--aria-expanded=\"state.isMenuOpen\" data-wp-on-async--click=\"actions.toggleMenuOnClick\" aria-label=\"ABOUT submenu\" class=\"wp-block-navigation-item__content wp-block-navigation-submenu__toggle\" aria-expanded=\"false\"><span class=\"wp-block-navigation-item__label\">ABOUT</span><span class=\"wp-block-navigation__submenu-icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M1.50002 4L6.00002 "
+    },
+    {
+      "selector": "ul li",
+      "text": "Find My County",
+      "html": "<a class=\"wp-block-navigation-item__content\" href=\"https://pagop.org/about/counties/\"><span class=\"wp-block-navigation-item__label\">Find My County</span></a>"
+    },
+    {
+      "selector": "[class*=\"item\"]",
+      "text": "ABOUTOur PartyFind My CountyElected OfficialsTAKE ACTIONVolunteerLet’s VoteInternshipsApply for a JobEVENTSSTORESTATE COMMITTEE",
+      "html": "<ul style=\"text-transform:uppercase;\" class=\"wp-block-navigation__container items-justified-right p-2 d-none d-lg-flex nav--desktop wp-block-navigation\"><li data-wp-context=\"{ &quot;submenuOpenedBy&quot;: { &quot;click&quot;: false, &quot;hover&quot;: false, &quot;focus&quot;: false }, &quot;type&quot;: &quot;submenu&quot;, &quot;modal&quot;: null }\" data-wp-interactive=\"core/navigation\" data-wp-on--focusout=\"actions.handleMenuFocusout\" data-wp-on--keydown=\"actions.handleMenuKeydown\" data-wp-on-"
+    },
+    {
+      "selector": "[class*=\"item\"]",
+      "text": "ABOUTOur PartyFind My CountyElected OfficialsTAKE ACTIONVolunteerLet’s VoteInternshipsApply for a JobEVENTSSTORESTATE COMMITTEE",
+      "html": "<li data-wp-context=\"{ &quot;submenuOpenedBy&quot;: { &quot;click&quot;: false, &quot;hover&quot;: false, &quot;focus&quot;: false }, &quot;type&quot;: &quot;submenu&quot;, &quot;modal&quot;: null }\" data-wp-interactive=\"core/navigation\" data-wp-on--focusout=\"actions.handleMenuFocusout\" data-wp-on--keydown=\"actions.handleMenuKeydown\" data-wp-on-async--mouseenter=\"actions.openMenuOnHover\" data-wp-on-async--mouseleave=\"actions.closeMenuOnHover\" data-wp-watch=\"callbacks.initMenu\" tabindex=\"-1\" clas"
+    },
+    {
+      "selector": "[class*=\"item\"]",
+      "text": "ABOUTOur PartyFind My CountyElected Officials",
+      "html": "<a class=\"wp-block-navigation-item__content\" href=\"https://pagop.org/about/\"><span class=\"wp-block-navigation-item__label\">ABOUT</span><button data-wp-bind--aria-expanded=\"state.isMenuOpen\" data-wp-on-async--click=\"actions.toggleMenuOnClick\" aria-label=\"ABOUT submenu\" class=\"wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle\" aria-expanded=\"false\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" aria-hidden=\"true\" focusable=\"false\""
+    },
+    {
+      "selector": "[class*=\"item\"]",
+      "text": "Find My County",
+      "html": "<a class=\"wp-block-navigation-item__content\" href=\"https://pagop.org/about/counties/\"><span class=\"wp-block-navigation-item__label\">Find My County</span></a>"
+    },
+    {
+      "selector": "[class*=\"item\"]",
+      "text": "Find My County",
+      "html": "<span class=\"wp-block-navigation-item__label\">Find My County</span>"
+    },
+    {
+      "selector": "[class*=\"item\"]",
+      "text": "Find My County",
+      "html": "Find My County"
+    },
+    {
+      "selector": "[class*=\"item\"]",
+      "text": "ABOUTOur PartyFind My CountyElected Officials",
+      "html": "<button data-wp-bind--aria-expanded=\"state.isMenuOpen\" data-wp-on-async--click=\"actions.toggleMenuOnClick\" aria-label=\"ABOUT submenu\" class=\"wp-block-navigation-item__content wp-block-navigation-submenu__toggle\" aria-expanded=\"false\"><span class=\"wp-block-navigation-item__label\">ABOUT</span><span class=\"wp-block-navigation__submenu-icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M1.50002 4L6.00002 "
+    },
+    {
+      "selector": "[class*=\"item\"]",
+      "text": "Find My County",
+      "html": "<a class=\"wp-block-navigation-item__content\" href=\"https://pagop.org/about/counties/\"><span class=\"wp-block-navigation-item__label\">Find My County</span></a>"
+    },
+    {
+      "selector": "[class*=\"item\"]",
+      "text": "Find My County",
+      "html": "<span class=\"wp-block-navigation-item__label\">Find My County</span>"
+    },
+    {
+      "selector": "[class*=\"item\"]",
+      "text": "Find My County",
+      "html": "Find My County"
+    }
+  ],
+  "allLinks": [
+    {
+      "text": "Skip to content",
+      "href": "#wp--skip-link--target"
+    },
+    {
+      "text": "ABOUT",
+      "href": "https://pagop.org/about/"
+    },
+    {
+      "text": "Our Party",
+      "href": "https://pagop.org/about/"
+    },
+    {
+      "text": "Find My County",
+      "href": "https://pagop.org/about/counties/"
+    },
+    {
+      "text": "Elected Officials",
+      "href": "https://pagop.org/?page_id=1249"
+    },
+    {
+      "text": "TAKE ACTION",
+      "href": "#TAKEACTION"
+    },
+    {
+      "text": "Volunteer",
+      "href": "https://pagop.org/volunteer/"
+    },
+    {
+      "text": "Let’s Vote",
+      "href": "https://pagop.org/voting/"
+    },
+    {
+      "text": "Internships",
+      "href": "https://pagop.org/?page_id=1285"
+    },
+    {
+      "text": "Apply for a Job",
+      "href": "https://pagop.org/volunteer/jobs/"
+    },
+    {
+      "text": "EVENTS",
+      "href": "https://pagop.org/gop-events"
+    },
+    {
+      "text": "STORE",
+      "href": "https://secure.winred.com/pa-gop/storefront/"
+    },
+    {
+      "text": "STATE COMMITTEE",
+      "href": "https://pagop.org/state-committee-portal/"
+    },
+    {
+      "text": "DonaTE",
+      "href": "https://secure.winred.com/pa-gop/pagopwebsitedonation?recurring=true"
+    },
+    {
+      "text": "Our Party",
+      "href": "https://pagop.org/about/"
+    },
+    {
+      "text": "Find My County",
+      "href": "https://pagop.org/about/counties/"
+    },
+    {
+      "text": "Elected Officials",
+      "href": "https://pagop.org/?page_id=1249"
+    },
+    {
+      "text": "Volunteer",
+      "href": "https://pagop.org/volunteer/"
+    },
+    {
+      "text": "Let’s Vote",
+      "href": "https://pagop.org/voting/"
+    },
+    {
+      "text": "Internships",
+      "href": "https://pagop.org/?page_id=1285"
+    },
+    {
+      "text": "Apply for a Job",
+      "href": "https://pagop.org/volunteer/jobs/"
+    },
+    {
+      "text": "EVENTS",
+      "href": "https://pagop.org/gop-events"
+    },
+    {
+      "text": "STORE",
+      "href": "https://secure.winred.com/pa-gop/storefront/"
+    },
+    {
+      "text": "STATE COMMITTEE",
+      "href": "https://pagop.org/state-committee-portal/"
+    },
+    {
+      "text": "homepage",
+      "href": "/"
+    },
+    {
+      "text": "Facebook",
+      "href": "https://www.facebook.com/PennsylvaniaGOP/"
+    },
+    {
+      "text": "Twitter",
+      "href": "https://www.twitter.com/PAGOP"
+    },
+    {
+      "text": "Instagram",
+      "href": "https://www.instagram.com/pennsylvaniagop"
+    },
+    {
+      "text": "(717) 234-4901",
+      "href": "tel:(717) 234-4901"
+    },
+    {
+      "text": "Privacy Policy",
+      "href": "/privacy-policy"
+    },
+    {
+      "text": "Privacy Policy",
+      "href": "https://policies.google.com/privacy"
+    },
+    {
+      "text": "Terms of Service",
+      "href": "https://policies.google.com/terms"
+    },
+    {
+      "text": "English",
+      "href": "#"
+    },
+    {
+      "text": "Español",
+      "href": "#"
+    }
+  ]
+}
