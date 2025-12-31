@@ -1,0 +1,72 @@
+[
+  {
+    "state": "Texas",
+    "stateCode": "TX",
+    "primaryDate": "2026-03-03",
+    "chairElectionProcess": "Elected in primary; conventions follow",
+    "filingDeadline": "2025-12-08"
+  },
+  {
+    "state": "Florida",
+    "stateCode": "FL",
+    "primaryDate": "2026-08-18",
+    "chairElectionProcess": "Post-primary reorganization",
+    "filingDeadline": "2026-06-01"
+  },
+  {
+    "state": "Ohio",
+    "stateCode": "OH",
+    "primaryDate": "2026-05-05",
+    "chairElectionProcess": "County conventions in June",
+    "filingDeadline": "2026-04-01"
+  },
+  {
+    "state": "Arizona",
+    "stateCode": "AZ",
+    "primaryDate": "2026-07-28",
+    "chairElectionProcess": "Precinct elections in primary",
+    "filingDeadline": "2026-05-01"
+  },
+  {
+    "state": "Georgia",
+    "stateCode": "GA",
+    "primaryDate": "2026-05-19",
+    "chairElectionProcess": "County conventions",
+    "filingDeadline": "2026-03-01"
+  },
+  {
+    "state": "Pennsylvania",
+    "stateCode": "PA",
+    "primaryDate": "2026-05-19",
+    "chairElectionProcess": "Post-primary",
+    "filingDeadline": "2026-04-01"
+  },
+  {
+    "state": "Michigan",
+    "stateCode": "MI",
+    "primaryDate": "2026-08-04",
+    "chairElectionProcess": "Conventions",
+    "filingDeadline": "2026-06-01"
+  },
+  {
+    "state": "Wisconsin",
+    "stateCode": "WI",
+    "primaryDate": "2026-08-11",
+    "chairElectionProcess": "Conventions",
+    "filingDeadline": "2026-07-01"
+  },
+  {
+    "state": "North Carolina",
+    "stateCode": "NC",
+    "primaryDate": "2026-03-03",
+    "chairElectionProcess": "Post-primary",
+    "filingDeadline": "2026-01-01"
+  },
+  {
+    "state": "Virginia",
+    "stateCode": "VA",
+    "primaryDate": "2027-06-01",
+    "chairElectionProcess": "Odd-year county reorganizations",
+    "filingDeadline": "2027-04-01"
+  }
+]

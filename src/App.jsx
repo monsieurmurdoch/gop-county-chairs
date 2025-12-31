@@ -1,12 +1,14 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { countyChairs, getStates } from './data/county-chairs';
 import { candidates, getCandidates, searchCandidates as searchCandidatesData, addCandidate, updateCandidate, deleteCandidate, getStatusStats } from './data/candidates';
 import { getAllStatesWithChairData } from './data/us-states';
+import { chairsApi, localChairsStorage } from './api/chairs';
 import Filters from './components/Filters';
 import CountyTable from './components/CountyTable';
 import CandidatesTable from './components/CandidatesTable';
 import CandidateForm from './components/CandidateForm';
 import CandidateModal from './components/CandidateModal';
+import CountyForm from './components/CountyForm';
 import StateMap from './components/StateMap';
 
 function App() {
@@ -14,12 +16,15 @@ function App() {
   const [view, setView] = useState('chairs');
 
   // Chairs state
+  const [chairsData, setChairsData] = useState(countyChairs);
   const [selectedState, setSelectedState] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortConfig, setSortConfig] = useState({ key: 'county', direction: 'asc' });
   const [showOnlyMissing, setShowOnlyMissing] = useState(false);
   const [viewMode, setViewMode] = useState('recent'); // 'recent' or 'all'
   const [lastViewed, setLastViewed] = useState([]); // Array of chair IDs recently viewed
+  const [showChairForm, setShowChairForm] = useState(false);
+  const [editingChair, setEditingChair] = useState(null);
 
   // Handle when a chair is viewed
   const handleChairViewed = (chairId) => {
@@ -40,23 +45,23 @@ function App() {
 
   // Calculate coverage stats for chairs
   const coverageStats = useMemo(() => {
-    const withData = countyChairs.filter(c =>
+    const withData = chairsData.filter(c =>
       c.chairName && c.chairName !== 'TBD' && c.chairName !== 'VACANT' && c.chairName !== 'Coming Soon'
     );
-    const withEmail = countyChairs.filter(c => c.email);
-    const withPhone = countyChairs.filter(c => c.phone);
+    const withEmail = chairsData.filter(c => c.email);
+    const withPhone = chairsData.filter(c => c.phone);
     return {
-      total: countyChairs.length,
+      total: chairsData.length,
       withData: withData.length,
       withEmail: withEmail.length,
       withPhone: withPhone.length,
-      percent: ((withData.length / countyChairs.length) * 100).toFixed(1)
+      percent: ((withData.length / chairsData.length) * 100).toFixed(1)
     };
-  }, []);
+  }, [chairsData]);
 
   // Get filtered and sorted chairs data
   const filteredChairs = useMemo(() => {
-    let filtered = countyChairs;
+    let filtered = chairsData;
 
     // Apply view mode filter
     if (viewMode === 'recent' && lastViewed.length > 0) {
@@ -149,7 +154,7 @@ function App() {
     return filtered;
   }, [candidates, candidateFilter, candidateSearch, candidateSortConfig]);
 
-  const states = getAllStatesWithChairData(countyChairs);
+  const states = getAllStatesWithChairData(chairsData);
   const candidateStatusStats = getStatusStats();
 
   const handleSort = (key) => {
@@ -218,6 +223,52 @@ function App() {
       deleteCandidate(candidate.id);
       setCandidates(getCandidates());
       setViewingCandidate(null);
+    }
+  };
+
+  // Chair CRUD handlers
+  const handleSaveChair = async (chairData) => {
+    try {
+      // Generate ID
+      const countyNormalized = chairData.county.toLowerCase()
+        .replace(/ county| parish| borough| city/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/[^a-z0-9-]/g, '');
+      const id = `${chairData.stateCode}-${countyNormalized}`;
+
+      const chairPayload = {
+        ...chairData,
+        id,
+      };
+
+      if (editingChair) {
+        // Update existing chair
+        const updated = await chairsApi.update(editingChair.id, chairPayload);
+        setChairsData(prev => prev.map(c => c.id === editingChair.id ? updated : c));
+      } else {
+        // Create new chair
+        const created = await chairsApi.create(chairPayload);
+        setChairsData(prev => [...prev, created]);
+      }
+
+      setShowChairForm(false);
+      setEditingChair(null);
+    } catch (error) {
+      alert(`Error: ${error.message}`);
+    }
+  };
+
+  const handleEditChair = (chair) => {
+    setEditingChair(chair);
+    setShowChairForm(true);
+  };
+
+  const handleDeleteChair = async (chair) => {
+    try {
+      await chairsApi.delete(chair.id);
+      setChairsData(prev => prev.filter(c => c.id !== chair.id));
+    } catch (error) {
+      alert(`Error: ${error.message}`);
     }
   };
 
@@ -334,7 +385,7 @@ function App() {
           <>
             {/* State Map */}
             <StateMap
-              countyChairsData={countyChairs}
+              countyChairsData={chairsData}
               selectedState={selectedState}
               onSelectState={setSelectedState}
             />
@@ -362,7 +413,25 @@ function App() {
               onSort={handleSort}
               candidates={candidates}
               onChairViewed={handleChairViewed}
+              onEdit={handleEditChair}
+              onDelete={handleDeleteChair}
             />
+
+            {/* Add Chair Button */}
+            <div className="mt-4 flex justify-end">
+              <button
+                onClick={() => {
+                  setEditingChair(null);
+                  setShowChairForm(true);
+                }}
+                className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors flex items-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0h6" />
+                </svg>
+                Add County Chair
+              </button>
+            </div>
           </>
         )}
 
@@ -498,6 +567,23 @@ function App() {
           }}
           onDelete={handleDeleteCandidate}
         />
+      )}
+
+      {/* County Chair Form Modal */}
+      {showChairForm && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" onClick={() => setShowChairForm(false)}>
+          <div onClick={(e) => e.stopPropagation()}>
+            <CountyForm
+              chair={editingChair}
+              existingChairs={chairsData}
+              onSave={handleSaveChair}
+              onCancel={() => {
+                setShowChairForm(false);
+                setEditingChair(null);
+              }}
+            />
+          </div>
+        </div>
       )}
     </div>
   );
